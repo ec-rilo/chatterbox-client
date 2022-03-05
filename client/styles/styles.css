@@ -60,17 +60,59 @@ form input[type=text] {
 }
 
 .chat {
-    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
     margin-bottom: 5px;
-    background-color: #eee;
+    border: 1px solid white;
 }
 
-.chat .username {
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+
+}
+
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #45A5BF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 800;
+}
++
+.user-info-container {
+    display: flex;
+}
+
+.text-container {
+    margin-bottom: 35px;
+}
+
+
+.chat .room {
     font-weight: 800;
 }
 
+.chat .username {
+    font-weight: 1;
+    color: #767676;
+}
+
 .chat:hover {
-    background-color: #ddd;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .spinner {
@@ -88,3 +130,18 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+
+
+/* <div class="chat">
+<div class="circle">
+  <%= username.charAt(0).toUpperCase() %>
+</div>
+<div>
+  <div class="user-info-container">
+    <p><span>Room: <%= roomname %> <span>@<%= username %></span></span></p>
+  </div>
+  <div class="text-container">
+    <p><%= text %></p>
+  </div>
+</div>
+</div> */
